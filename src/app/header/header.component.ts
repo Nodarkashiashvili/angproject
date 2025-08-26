@@ -13,10 +13,10 @@ export class HeaderComponent {
 
   showmobilemenu = false
 
-active = 'active'
+  active = 'active'
 
 
-showhidemenu(){
-  this.showmobilemenu == false ? this.showmobilemenu = true : this.showmobilemenu = false
-}
+  showhidemenu() {
+    this.showmobilemenu == false ? this.showmobilemenu = true : this.showmobilemenu = false
+  }
 }
