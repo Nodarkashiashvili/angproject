@@ -12,6 +12,10 @@ import { RouterModule } from '@angular/router';
 export class HeaderComponent {
 
   showmobilemenu = false
+
+active = 'active'
+
+
 showhidemenu(){
   this.showmobilemenu == false ? this.showmobilemenu = true : this.showmobilemenu = false
 }
