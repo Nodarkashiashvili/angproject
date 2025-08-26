@@ -5,10 +5,10 @@
     </div>
     <div class="line"></div>
     <ul >
-        <li *ngIf = "!showmobilemenu"><a href="">Home</a></li>
-        <li *ngIf = "!showmobilemenu"><a href="">Rooms</a></li>
-        <li *ngIf = "!showmobilemenu"><a href="">Hotels</a></li>
-        <li *ngIf = "!showmobilemenu"><a href="">Booked Rooms</a></li>
+        <li *ngIf = "!showmobilemenu"><a routerLink="home" >Home</a></li>
+        <li *ngIf = "!showmobilemenu"><a routerLink="rooms">Rooms</a></li>
+        <li *ngIf = "!showmobilemenu"><a routerLink="hotels">Hotels</a></li>
+        <li *ngIf = "!showmobilemenu"><a routerLink="Bookedrooms">Booked Rooms</a></li>
     </ul>
     <div class="burger"(click)="showhidemenu()">
     <div class="line"></div>
@@ -21,9 +21,9 @@
 
 <div class="mobilemenu" *ngIf = "showmobilemenu">
     <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">Rooms</a></li>
-        <li><a href="">Hotels</a></li>
-        <li><a href="">Booked Rooms</a></li>
+        <li><a routerLink="home" >Home</a></li>
+        <li><a routerLink="rooms" >Rooms</a></li>
+        <li><a routerLink="hotels" >Hotels</a></li>
+        <li><a routerLink="Bookedrooms" >Booked Rooms</a></li>
     </ul>
 </div>
