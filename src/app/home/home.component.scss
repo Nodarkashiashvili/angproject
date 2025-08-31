@@ -1,33 +1,35 @@
-.seehotels{
-    width: 100%;
-    height: 40vh;
-    background-color: blueviolet;
-    padding-bottom: 190px;
-    background-image: url(../../../public/images/slide-bg.jpg);
+.seehotels {
+  width: 100%;
+  height: 40vh;
+//   background-color: blueviolet;
+  padding-bottom: 190px;
+  background-image: url(../../../public/images/slide-bg.jpg);
+  background-size: cover;
+  
 }
 
+.favoriteline1 {
+  width: 100%;
+  // height: 10px;
+  // background-color: aqua;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  p {
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(53, 52, 52);
+  }
+  .line001 {
+    width: 500px;
+    height: 2px;
+    background-color: rgb(119, 118, 118);
+  }
+}
 
-
-
-
-.favoriteline1{
-    width: 100%;
-    // height: 10px;
-    // background-color: aqua;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    align-items: center;
-    p{
-        font-size: large;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: rgb(53, 52, 52);
-
-    }
-    .line001{
-        width: 500px;
-        height: 2px;
-        background-color: rgb(119, 118, 118);
-        
-    }
+.roomboxesdiv {
+  width: 100%;
+  height: 40vh;
+  background-color: aquamarine;
 }
