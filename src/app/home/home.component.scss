@@ -5,8 +5,51 @@
   padding-bottom: 190px;
   background-image: url(../../../public/images/slide-bg.jpg);
   background-size: cover;
-  
+  display: flex;
+  flex-direction: column;
+ align-items: end;
+  .paragrahp1{
+    width: 50%;
+    height: 20px;
+    // background-color: blue;
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    flex-direction: column;
+    align-items: center;
+    button{
+        width: 100px;
+        height: 70px;
+        color: aliceblue;
+        background-color: palevioletred;
+        border-radius: 5px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    }
+
+    
+  }
+
+ 
+  .stars{
+    width: 50%;
+    height: 100px;
+    color: aliceblue;
+    display: flex;
+    gap: 10px;
+   
+    
+  }
+  h1{display: flex ;
+    align-items: center;
 }
+h3{
+    display: flex;
+    align-items: center;
+}
+}
+  
+
 
 .favoriteline1 {
   width: 100%;
