@@ -13,19 +13,19 @@ export const routes: Routes = [
 
 
     {path: 'home', 
-        component: HomeComponent
+    loadComponent:()=>import('./home/home.component').then(p=>p.HomeComponent)
 
     },
     {
         path: 'rooms',
-        component : RoomsComponent
+        loadComponent:()=>import('./rooms/rooms.component').then(p=>p.RoomsComponent)
     },
     {
         path: "hotels",
-        component: HotelsComponent
+        loadComponent:()=>import('./hotels/hotels.component').then(p=>p.HotelsComponent)
     },
     {path: 'bookedrooms',
-        component: BookedroomsComponent
+        loadComponent:()=>import('./bookedrooms/bookedrooms.component').then(p=>p.BookedroomsComponent)
 
     },
     {path: '**',
