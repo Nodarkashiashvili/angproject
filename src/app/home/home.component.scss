@@ -76,7 +76,7 @@ h3{
 .roomboxesdiv {
   width: 100%;
   // height: 40vh;
-  background-color: aquamarine;
+  // background-color: aquamarine;
   display: flex;
   .roombox01{
     width: 350px;
@@ -97,24 +97,40 @@ h3{
     .divtitle{
       width: 70%;
       height: 50px;
-      background-color: rgb(255, 168, 127);
+      // background-color: rgb(255, 168, 127);
+      display: flex;
+      justify-content: center;
+
     }
     .divprise{
       width: 30%;
       height: 50px;
-      background-color: gray;
+      // background-color: gray;
+      display: flex;
+      // justify-content: center;
+      border: 3px solid gray;
+      justify-content: center;
+    
+      
+      
+      
     }
   }
   .divbooknow{
     width: 100%;
     height: 50px;
  
-    background-color: blue;
+    // background-color: blue;
     button{
       width: 100%;
       height: 50px;
+      border-radius: 5px;
+      color: aliceblue;
+      background-color: rgb(51, 134, 134);
     }
   }
+
+
 }
 
 
