@@ -1,1 +1,21 @@
-<p>hotels works!</p>
+
+<!-- @for (let hotel of hotelarr; track hotel.id) { -->
+
+    <div *ngFor="let el of hotelarr" class="roombox01">
+  <div class="divimage">
+    <img [src]="el.featuredImage" alt="poto">
+  </div>
+  <div class="divtitleprise">
+    <div class="divtitle">
+      <p>premoum room</p>
+    </div>
+    <div class="divprise">
+      <p>prise</p>
+     
+    </div>
+  </div>
+  <div class="divbooknow">
+    <button>BOOK NOW</button>
+  </div>
+
+<!-- } -->

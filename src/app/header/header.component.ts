@@ -19,4 +19,8 @@ export class HeaderComponent {
   showhidemenu() {
     this.showmobilemenu == false ? this.showmobilemenu = true : this.showmobilemenu = false
   }
+
+  hidemenu(){
+    this.showmobilemenu=false
+  }
 }
