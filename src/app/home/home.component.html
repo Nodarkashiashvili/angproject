@@ -28,29 +28,33 @@
 
 </div>
 <div class="favoriteline1">
-  <div class="line001"></div>
+  <div  class="line001"></div>
   <p>Guests Favorite Rooms</p>
   <div class="line001"></div>
 </div>
 
-<div class="roomboxesdiv">
 
-<div class="roombox01">
+
+<!-- ////////////////////////rooms/////////////////// -->
+<div  class="roomboxesdiv">
+
+<div  class="roombox01">
   <div class="divimage">
-    <img src="" alt="poto">
+    <img [src]="hotelobj.images" alt="poto">
   </div>
   <div class="divtitleprise">
     <div class="divtitle">
-      <p>premoum room</p>
+      <p>{{hotelobj.name}}</p>
     </div>
     <div class="divprise">
-      <p>prise</p>
-     
+      <p>{{hotelobj.pricePerNight}}</p>
+
     </div>
   </div>
   <div class="divbooknow">
     <button>BOOK NOW</button>
   </div>
+
 
 
 </div>

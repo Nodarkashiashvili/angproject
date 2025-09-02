@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonfunctionService } from '../services/commonfunction.service';
 import { ApihttpService } from '../services/apihttp.service';
 import { CommonModule } from '@angular/common';
+import { Hotels } from '../models/hotels';
 
 @Component({
   selector: 'app-hotels',
@@ -15,15 +16,15 @@ export class HotelsComponent {
     private http: ApihttpService,
   ) {}
 
-ngOnInit(){this.http.getData('https://hotelbooking.stepprojects.ge/api/Hotels/GetAll')
-  .subscribe((resp: any)=>{
-    console.log(resp)
-    this.hotelarr=resp
-  })
+  hotel = new Hotels();
 
-
-
-}
+  ngOnInit() {
+    this.http.getData('https://hotelbooking.stepprojects.ge/api/Hotels/GetAll')
+      .subscribe((resp: any) => {
+        console.log(resp);
+        this.hotelarr = resp;
+      });
+  }
 
 hotelarr : any [] = []
 }
