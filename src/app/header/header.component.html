@@ -20,16 +20,27 @@
       <a routerLink="/bookedrooms" [routerLinkActive]="active">Booked Rooms</a>
     </li>
   </ul>
+
+
+  <div class="logreg">
+     
+    <a routerLink="/register" *ngIf="!isAuth">Register</a>
+    <a routerLink="/login"*ngIf="!isAuth" >Login</a>
+  
+  </div>
+
   <div class="burger" (click)="showhidemenu()">
     <div class="line"></div>
     <div class="line"></div>
     <div class="line"></div>
   </div>
+
+ 
 </nav>
 
 <div class="mobilemenu" *ngIf="showmobilemenu">
   <ul>
-    <li ><a (click)="hidemenu()" routerLink="/home">Home</a></li>
+    <li><a (click)="hidemenu()" routerLink="/home">Home</a></li>
     <li><a (click)="hidemenu()" routerLink="/rooms">Rooms</a></li>
     <li><a (click)="hidemenu()" routerLink="/hotels">Hotels</a></li>
     <li><a (click)="hidemenu()" routerLink="/bookedrooms">Booked Rooms</a></li>

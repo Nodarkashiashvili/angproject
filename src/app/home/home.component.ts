@@ -3,11 +3,13 @@ import { Route, Router, RouterModule } from '@angular/router';
 import { CommonfunctionService } from '../services/commonfunction.service';
 import { ApihttpService } from '../services/apihttp.service';
 import { Hotels } from '../models/hotels';
-import { CommonModule, NgForOf,  } from "../../../node_modules/@angular/common/common_module.d-NEF7UaHr";
+import { CommonModule } from '@angular/common';
+import { RoomService } from '../services/room.service';
+
 
 @Component({
   selector: 'app-home',
-  imports: [RouterModule,  ],
+  imports: [RouterModule, CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
@@ -16,7 +18,8 @@ export class HomeComponent {
   constructor(
     private commonfun: CommonfunctionService,
     private http: ApihttpService,
-    private router: Router
+    private router: Router,
+    private roomApi : RoomService,
   ) {}
   
  
@@ -25,13 +28,9 @@ export class HomeComponent {
   
   ngOnInit(){
     console.log('hi')
-    this.http.getData('https://hotelbooking.stepprojects.ge/api/Rooms/GetAll')
-    .subscribe((resp : any)=> {
-      console.log(resp)
-      this.hotelobj = resp;
-      
-
-    })
+    this.roomApi.getRoomdata('https://hotelbooking.stepprojects.ge/api/Rooms/GetAll')
+  
+ 
   }
   gotohotel(){
     this.router.navigateByUrl('/hotels')
