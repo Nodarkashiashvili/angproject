@@ -3,21 +3,12 @@ import { ApihttpService } from './apihttp.service';
 import { Room } from '../models/hotels';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class RoomService {
+  constructor(private apihttp: ApihttpService) {}
 
-  constructor(private apihttp : ApihttpService) { }
-
-
-  room!: Room
-  getRoomdata(url : string){
-    this.apihttp.getData(url)  
-     .subscribe((resp : any)=> {
-      console.log(resp)
-      this.room = resp;
-      
-
-    })
+  getRoomdata(url: string) {
+    return this.apihttp.getData(url);
   }
 }

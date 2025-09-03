@@ -2,7 +2,7 @@ import { Component, input } from '@angular/core';
 import { Route, Router, RouterModule } from '@angular/router';
 import { CommonfunctionService } from '../services/commonfunction.service';
 import { ApihttpService } from '../services/apihttp.service';
-import { Hotels } from '../models/hotels';
+import { Hotels, Room } from '../models/hotels';
 import { CommonModule } from '@angular/common';
 import { RoomService } from '../services/room.service';
 
@@ -24,12 +24,17 @@ export class HomeComponent {
   
  
 
-
   
+  rooms : Room[] = []
   ngOnInit(){
     console.log('hi')
-    this.roomApi.getRoomdata('https://hotelbooking.stepprojects.ge/api/Rooms/GetAll')
-  
+    this.roomApi.getRoomdata('https://hotelbooking.stepprojects.ge/api/Rooms/GetAll').subscribe((resp:any) => {
+      console.log(resp)
+
+      this.rooms = resp.slice(0,6)
+    })
+    
+
  
   }
   gotohotel(){

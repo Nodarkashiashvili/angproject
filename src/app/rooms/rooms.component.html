@@ -1,1 +1,23 @@
-<p>rooms works!</p>
+
+<div class="roomboxesdiv">
+  @for(room of rooms; track room.id){
+  <div class="roombox01">
+    <div class="divimage">
+      <img alt="poto" [src]="room.images[0].source"/>
+    </div>
+    <div class="divtitleprise">
+      <div class="divtitle">
+        <p>title: {{room.name}}</p>
+      </div>
+      <div class="divprise">
+        <p>PRISE </p>
+        <p>per night : {{room.pricePerNight}}</p>
+      </div>
+    </div>
+    <div class="divbooknow">
+      <button routerLink="/booking/{{room.id}}">BOOK NOW</button>
+    </div>
+  </div>
+
+  }
+</div>

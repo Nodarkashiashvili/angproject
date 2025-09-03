@@ -1,4 +1,12 @@
 
+<div class="citiesBtns">
+  <button>All</button>
+  @for(city of cities; track $index){
+       <button>{{city}}</button>
+  }
+</div>
+
+
 <!-- @for (let hotel of hotelarr; track hotel.id) { -->
 <div class="roomboxesdiv">
     <div *ngFor="let el of hotelarr" class="roombox01">
@@ -15,7 +23,7 @@
     </div>
   </div>
   <div class="divbooknow">
-    <button>VIEW ROOMS</button>
+    <button routerLink="/rooms/{{el.id}}">VIEW ROOMS</button>
   </div>
   </div>
 

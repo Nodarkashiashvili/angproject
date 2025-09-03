@@ -20,6 +20,16 @@ export const routes: Routes = [
       import('./rooms/rooms.component').then((p) => p.RoomsComponent),
   },
   {
+    path: 'rooms/:id',
+    loadComponent: () =>
+      import('./rooms/rooms.component').then((p) => p.RoomsComponent),
+  },
+  {
+    path: 'booking/:id',
+    loadComponent: () =>
+      import('./booking/booking.component').then((p) => p.BookingComponent),
+  },
+  {
     path: 'hotels',
     loadComponent: () =>
       import('./hotels/hotels.component').then((p) => p.HotelsComponent),

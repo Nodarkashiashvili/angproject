@@ -11,7 +11,10 @@ export class Hotels {
 }
 
 export class Room {
+    id!:number;
     available!: boolean;
+    name!:string;
+    pricePerNight! : number;
     maximumGuests!: number;
     roomTypeId!: number;
     bookedDates!: Date[];

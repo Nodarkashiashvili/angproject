@@ -1,0 +1,32 @@
+.booking{
+  width: 100%;
+  display: flex;
+  padding: 30px;
+  flex-wrap: wrap;
+  
+  .car{
+    width: 50%;
+  }
+  .bookingForm{
+      width: 50%;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      input{
+
+        width: 100%;
+      }
+  }
+}
+
+@media screen and (max-width:700px) {
+  .booking{
+  .car{
+    width: 100%;
+  }
+  .bookingForm{
+      width: 100%;
+  }
+}
+}

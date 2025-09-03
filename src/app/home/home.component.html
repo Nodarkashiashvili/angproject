@@ -1,65 +1,50 @@
 <div class="seehotels">
-<div class="stars">
+  <div class="stars">
     <h3><i class="fa-solid fa-star"></i></h3>
     <h3><i class="fa-solid fa-star"></i></h3>
     <h3><i class="fa-solid fa-star"></i></h3>
     <h3><i class="fa-solid fa-star"></i></h3>
     <h3><i class="fa-solid fa-star"></i></h3>
     <h1>Five Star Hotels</h1>
-        <h3><i class="fa-solid fa-star"></i></h3>
     <h3><i class="fa-solid fa-star"></i></h3>
     <h3><i class="fa-solid fa-star"></i></h3>
     <h3><i class="fa-solid fa-star"></i></h3>
     <h3><i class="fa-solid fa-star"></i></h3>
-   
-   
-    
-   
-</div>
-<div class="paragrahp1">
+    <h3><i class="fa-solid fa-star"></i></h3>
+  </div>
+  <div class="paragrahp1">
     <h2>And we like to keep it that way!</h2>
     <button (click)="gotohotel()">SEE HOTELS</button>
-  
-
-</div>
-
-
-
-
+  </div>
 </div>
 <div class="favoriteline1">
-  <div  class="line001"></div>
+  <div class="line001"></div>
   <p>Guests Favorite Rooms</p>
   <div class="line001"></div>
 </div>
 
-
-
 <!-- ////////////////////////rooms/////////////////// -->
-<div  class="roomboxesdiv">
-
-<div  class="roombox01">
-  <div class="divimage">
-    <img alt="poto">
-  </div>
-  <div class="divtitleprise">
-    <div class="divtitle">
-        <p>title</p>
+<div class="roomboxesdiv">
+  @for(room of rooms; track room.id){
+  <div class="roombox01">
+    <div class="divimage">
+      <img alt="poto" [src]="room.images[0].source"/>
     </div>
-    <div class="divprise">
-      <p>PRISE</p>
-      <p>per night</p>
+    <div class="divtitleprise">
+      <div class="divtitle">
+        <p>title: {{room.name}}</p>
+      </div>
+      <div class="divprise">
+        <p>PRISE </p>
+        <p>per night : {{room.pricePerNight}}</p>
+      </div>
+    </div>
+    <div class="divbooknow">
+      <button routerLink="/booking/{{room.id}}">BOOK NOW</button>
     </div>
   </div>
-  <div class="divbooknow">
-    <button>BOOK NOW</button>
-  </div>
 
-
-
-</div>
-
-
+  }
 </div>
 <div class="favoriteline1">
   <div class="line001"></div>
