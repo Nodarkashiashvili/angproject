@@ -38,4 +38,8 @@ export class HomeComponent {
   }
     hotelobj = new Hotels
     
+
+
+    cunrentDate = new Date()
+
 }
