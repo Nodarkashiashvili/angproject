@@ -17,9 +17,9 @@ let router = inject(Router)
     router.navigateByUrl('/register')
     Swal.fire({
   title: 'Hello!',
-  text: 'Yot Need to log in oR registry',
+  text: 'You Need to Log in oR Registry',
   icon: 'error',
-  confirmButtonText: 'Cool'
+  confirmButtonText: 'Registry'
 })
     // alert('please register')
     return false;
