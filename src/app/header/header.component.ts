@@ -30,4 +30,9 @@ this.isAuth = true
   hidemenu() {
     this.showmobilemenu = false;
   }
+
+
+  logout(){
+    localStorage.removeItem('token')
+  }
 }
