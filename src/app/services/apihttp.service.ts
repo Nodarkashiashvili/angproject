@@ -11,10 +11,15 @@ export class ApihttpService {
 
 getData(url : string){
   return this.http.get(url)
+  .pipe(
+    catchError(this.errorHandling)
+  )
 }
 
 postData(url : string, obj : any){
-  return this.http.post(url, obj).pipe()
+  return this.http.post(url, obj).pipe(
+    catchError(this.errorHandling)
+  )
   
   
 }
