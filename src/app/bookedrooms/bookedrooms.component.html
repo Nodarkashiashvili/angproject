@@ -6,17 +6,20 @@
 
 
 
-    <div class="divcont">
+    <div *ngFor="let book of booked" class="divcont">
 
 
 
         <div class="leftdiv">
-            <div class="sityimage"></div>
-            <div class="sitytitle">
-                <p>Courtyard by Marriott Tbilisi</p>
+            <div class="sityimage">
                 
             </div>
-
+            <div class="sitytitle">
+                <p>{{book.totalPrice}}</p>
+                
+            </div>
+    
+ 
 
         </div>
 
