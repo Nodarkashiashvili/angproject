@@ -2,12 +2,54 @@
 .divfiltre{
   width: 100%;
   height: 300px;
-  background-color: aqua;
-  .searchroom{
-    width: 100%;
-    height: 50px;
-    background-color: blueviolet;
+  // background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-top: 20px;
+  .butfitereded{
     display: flex;
+    flex-direction: column;
+    gap: 10px;
+    button{
+      width: 150px;
+      height: 30px;
+    }
+  }
+  .divinput{
+    width: 90%;
+    height: 200px;
+    // background-color: cadetblue;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    // border: 2px solid gray;
+    border-radius: 10px;
+    border: 2px solid gray;
+    input{
+      width: 200px;
+      height: 40px;
+    }
+    
+
+  
+
+  }
+
+  .searchroom{
+    width: 90%;
+    height: 50px;
+    // background-color: blueviolet;
+    display: flex;
+    padding-left: 10px;
+    gap: 5px;
+ 
+    button{
+     border-radius: 5px;
+
+    }
+  
    
 
   }

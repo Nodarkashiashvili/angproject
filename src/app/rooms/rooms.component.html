@@ -1,34 +1,43 @@
-
-
-
 <div class="divfiltre">
   <div class="searchroom">
     <button>All</button>
-     <button>Single Room</button>
-      <button>Double Room</button>
-       <button>Deluxe Room</button>
+    <button>Single Room</button>
+    <button>Double Room</button>
+    <button>Deluxe Room</button>
+  </div>
+  <div class="divinput">
+    <input type="range" />
+    <input type="text">
+   
+    <input type="date" />
+    <input type="date" />
+     <input type="number" />
+     <div class="butfitereded">
+      <button>APPLY FILTER</button>
+      <button>RESET</button>
+     </div>
+
+
 
   </div>
 </div>
-
 
 <div class="roomboxesdiv">
   @for(room of rooms; track room.id){
   <div class="roombox01">
     <div class="divimage">
-      <img alt="poto" [src]="room.images[0].source"/>
+      <img alt="poto" [src]="room.images[0].source" />
     </div>
     <div class="divtitleprise">
       <div class="divtitle">
-        <p>title: {{room.name}}</p>
+        <p>title: {{ room.name }}</p>
       </div>
       <div class="divprise">
-        <p>{{room.pricePerNight}} </p>
-        
+        <p>{{ room.pricePerNight }}</p>
       </div>
     </div>
     <div class="divbooknow">
-      <button routerLink="/booking/{{room.id}}">BOOK NOW</button>
+      <button routerLink="/booking/{{ room.id }}">BOOK NOW</button>
     </div>
   </div>
 
