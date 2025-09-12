@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ApihttpService } from '../services/apihttp.service';
 import { Route, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,8 @@ import { FormsModule } from '@angular/forms';
 })
 export class LoginComponent {
 
-constructor (private http : ApihttpService, private router : Router ){}
+constructor (private http : ApihttpService, private router : Router,
+   private auth : AuthService){}
 
 
 
@@ -28,6 +30,7 @@ password!: string;
       console.log(resp)
       alert('Loged Succesfully')
        localStorage.setItem('token',resp.token)
+       this.auth.logIn()
       this.router.navigateByUrl('/bookedrooms')
 
     })

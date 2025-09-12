@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, computed, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +10,15 @@ import { RouterModule } from '@angular/router';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent implements OnInit {
+
+  constructor(private auth : AuthService){
+    this.isAuthorized = computed(()=> this.auth.isAuth() )
+
+  }
+
+   isAuthorized! : any
+
+
   ngOnInit() {
     if(localStorage.getItem('token')){
 this.isAuth = true
@@ -34,5 +44,6 @@ this.isAuth = true
 
   logout(){
     localStorage.removeItem('token')
+    this.auth.logOut()
   }
 }
