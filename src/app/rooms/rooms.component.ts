@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { RoomService } from '../services/room.service';
 import { Room } from '../models/hotels';
+import { ApihttpService } from '../services/apihttp.service';
 
 @Component({
   selector: 'app-rooms',
@@ -12,6 +13,7 @@ import { Room } from '../models/hotels';
 export class RoomsComponent {
   constructor(
     private router: Router,
+    private http: ApihttpService,
 
     private route: ActivatedRoute,
     private roomApi: RoomService
@@ -44,4 +46,27 @@ export class RoomsComponent {
         });
     }
   }
+filterwytype(id:number){
+this.http.postData('https://hotelbooking.stepprojects.ge/api/Rooms/GetFiltered', {
+  roomTypeId : id
+}).subscribe((resp: any) => {
+          console.log(resp);
+
+          this.rooms = resp;
+        });
+
+  
+
+}
+all(){
+  this.roomApi
+        .getRoomdata('https://hotelbooking.stepprojects.ge/api/Rooms/GetAll')
+        .subscribe((resp: any) => {
+          console.log(resp);
+
+          this.rooms = resp;
+        });
+
+}
+
 }
