@@ -10,12 +10,14 @@
 }
 .checkinbox {
   width: 100%;
-  height: 80vh;
+//   height: 80vh;
   background-color: antiquewhite;
   display: flex;
   justify-content: center;
   padding-top: 50px;
   flex-direction: column;
+  align-items: center;
+  gap: 20px;
   .divcont{
     width: 90%;
     height: 150px;
