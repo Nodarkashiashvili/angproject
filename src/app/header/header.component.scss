@@ -34,7 +34,7 @@ nav{
     display: flex;
     flex-direction: column;
     gap: 4px;
-    // display: none;
+    display: none;
 
     .line{
         width: 35px;
@@ -81,12 +81,15 @@ nav{
     border-radius: 5px;
 }
 
-// @media screen and (max-width: 900px){
+@media screen and (max-width: 900px){
 
-//     .burger {
-//         display: flex;
-//     }
-// }
+    .burger {
+        display: flex !important;
+    }
+    nav ul {
+        display: none;
+    }
+}
 .logreg{
     width: 100px;
     height: 30px;

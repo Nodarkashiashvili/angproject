@@ -35,12 +35,12 @@
   <div class="bookingForm">
     <h3> price per night : {{room.pricePerNight}} $</h3>
    
-    <input type="date" required>
-    <input type="date" required>
-    <input type="text" placeholder="EnTer Name " required>
-    <input type="text" placeholder="EnTer Number" required>
+    <input type="date" required [(ngModel)]="startDate">
+    <input type="date" required [(ngModel)]="endDate">
+    <input type="text" placeholder="EnTer Name " required [(ngModel)]="name">
+    <input type="text" placeholder="EnTer Number" required [(ngModel)]="phoneNumber" >
 
-    <button>
+    <button (click)="bookRoom(room.id)" >
       Book
     </button>
 

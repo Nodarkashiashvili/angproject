@@ -1,24 +1,29 @@
 <div class="divfiltre">
   <div class="searchroom">
-    <button (click)="all()">All</button>
-    <button (click)="filterwytype(1)">Single Room</button>
-    <button (click)="filterwytype(2)" >Double Room</button>
-    <button (click)="filterwytype(3)">Deluxe Room</button>
+    <button (click)="all()" [ngClass]="{'active': roomType === 0}">All</button>
+    <button (click)="filterwytype(1)" [ngClass]="{'active': roomType === 1}">Single Room</button>
+    <button (click)="filterwytype(2)" [ngClass]="{'active': roomType === 2}">Double Room</button>
+    <button (click)="filterwytype(3)" [ngClass]="{'active': roomType === 3}">Deluxe Room</button>
   </div>
   <div class="divinput">
-    <input type="range" />
-    <input placeholder="Select a Room" type="text">
-  
-   <input type="date" />
-    <input type="date" />
-     <input placeholder="Guests" type="number" />
-     <div class="butfitereded">
-      <button>APPLY FILTER</button>
-      <button>RESET</button>
-     </div>
+    <div class="range">
+      <input type="range" min="0" max="1000" [(ngModel)]="priceRange" />
+      <p>max price: {{ priceRange }}</p>
+    </div>
+    <select name="" id="" [(ngModel)]="roomType">
+      <option value="0" selected>Choose Type</option>
+      <option value="1">Single Room</option>
+      <option value="2">Double Room</option>
+      <option value="3">Deluxe Room</option>
+    </select>
 
-
-
+    <input type="date" [(ngModel)]="startDate" />
+    <input type="date" [(ngModel)]="endDate" />
+    <input placeholder="Guests" type="number" [(ngModel)]="guestsNumber" />
+    <div class="butfitereded">
+      <button (click)="filter()">APPLY FILTER</button>
+      <button (click)="all()">RESET</button>
+    </div>
   </div>
 </div>
 

@@ -6,19 +6,36 @@ import { CommonModule } from '@angular/common';
   selector: 'app-bookedrooms',
   imports: [CommonModule],
   templateUrl: './bookedrooms.component.html',
-  styleUrl: './bookedrooms.component.scss'
+  styleUrl: './bookedrooms.component.scss',
 })
 export class BookedroomsComponent {
-constructor (private http : ApihttpService){}
+  constructor(private http: ApihttpService) {
+    this.bookId = localStorage.getItem('bookedId');
+  }
 
-ngOnInit(){
-  this.http.getData('https://hotelbooking.stepprojects.ge/api/Booking')
-  .subscribe((resp : any)=>{
-    console.log(resp)
-    this.booked=resp.slice(resp.length-7,resp.length-1)
-    console.log(this.booked)
-  })
-}
-booked : any [] = []
+  ngOnInit() {
+    this.http
+      .getData('https://hotelbooking.stepprojects.ge/api/Booking')
+      .subscribe((resp: any) => {
+        console.log(resp);
+        this.booked = resp.slice(resp.length - 7, resp.length - 1);
+        console.log(this.booked);
+        this.myBook = resp.filter((el: any) => el.id == this.bookId)[0];
+        console.log(this.myBook);
+      });
+  }
 
+  cancelBook() {
+    this.http
+      .deleteData(
+        `https://hotelbooking.stepprojects.ge/api/Booking/${this.myBook.id}`
+      )
+      .subscribe((resp) => alert(resp));
+    this.myBook = null;
+   
+  }
+
+  myBook: any;
+  bookId: any;
+  booked: any[] = [];
 }

@@ -3,6 +3,52 @@
   <button>Tbilisi</button>
 </div>
 <div class="checkinbox">
+
+  <div class="divcont" *ngIf="myBook != null">
+    <div class="leftdiv">
+      <div class="sityimage"></div>
+      <div class="diname">
+        <h4>Hotel</h4>
+         <p>redison</p>
+      </div>
+      <div class="diname">
+        <h4>Room</h4>
+         <p>price</p>
+      </div>
+      <div class="diname">
+        <h4>costumer</h4>
+         <p>Tbilisi</p>
+      </div>
+    </div>
+
+    <div class="rightdiv">
+        <div class="box1">
+            <h4> checkin</h4> 
+            <p>{{ myBook.checkInDate | date:'yyyy-MM-dd'}}</p>
+            
+
+        </div>
+        <div class="box1">
+            <h4> checuout</h4>
+            <p>{{ myBook.checkOutDate | date:'yyyy-MM-dd' }}</p>
+            
+        </div>
+        <div class="box1">
+            <h4>Total price</h4>
+            <p>{{ myBook.totalPrice }}$</p>
+            
+            
+        </div>
+        <div class="box1">
+            
+            <button (click)="cancelBook()">CANCEL BOOKING</button>
+            
+        </div>
+        
+    </div>
+  </div>
+
+  
   <div *ngFor="let book of booked" class="divcont">
     <div class="leftdiv">
       <div class="sityimage"></div>
@@ -23,13 +69,13 @@
     <div class="rightdiv">
         <div class="box1">
             <h4> checkin</h4> 
-            <p>2024-05-07</p>
+            <p>{{book.checkInDate | date:'yyyy-MM-dd'}}</p>
             
 
         </div>
         <div class="box1">
             <h4> checuout</h4>
-            <p>2024-05-07</p>
+            <p>{{book.checkOutDate | date:'yyyy-MM-dd'}}</p>
             
         </div>
         <div class="box1">
@@ -38,11 +84,11 @@
             
             
         </div>
-        <div class="box1">
+        <!-- <div class="box1">
             
             <button>CANCEL BOOKING</button>
             
-        </div>
+        </div> -->
         
     </div>
   </div>
