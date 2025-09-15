@@ -29,6 +29,12 @@
     // border: 2px solid gray;
     border-radius: 10px;
     border: 2px solid gray;
+   
+      button{
+        border-radius: 15px;
+       
+      }
+    }
     input{
       width: 180px;
       height: 40px;
@@ -57,7 +63,7 @@
   }
 
 
-}
+
 
 .roomboxesdiv {
   width: 100%;
@@ -136,4 +142,8 @@
 select {
   // width: 150px;
   height: 40px;
+}
+.buthovers:hover{
+background-color: gray;
+color: aliceblue;
 }
