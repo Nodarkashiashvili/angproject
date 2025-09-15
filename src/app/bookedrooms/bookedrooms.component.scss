@@ -26,12 +26,12 @@
     display: flex;
     .leftdiv{
         width: 50%;
-        height: 150px;
+        // height: 150px;
         // background-color: chartreuse;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 50px;
+        gap: 40px;
         .sityimage{
             width: 50px;
             height: 50px;
@@ -45,12 +45,14 @@
     }
     .rightdiv{
         width: 50%;
-        height: 150px;
+        // height: 150px;
         // background-color: rgb(148, 150, 175);
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 10px;
+        margin-bottom: 60px;
+        
         .box1{
             width: 115px;
             height: 10px;
