@@ -10,7 +10,7 @@
  align-items: end;
  padding-right: 100px;
   .paragrahp1{
-    width: 50%;
+    width: 65%;
     // height: 20px;
     // background-color: blue;
     display: flex;
@@ -35,11 +35,11 @@
 
  
   .stars{
-    width: 50%;
+    width: 60%;
     // height: 100px;
     color: aliceblue;
     display: flex;
-    gap: 10px;
+    // gap: 10px;
    
     
   }
@@ -118,7 +118,7 @@ h3{
       // background-color: gray;
       display: flex;
       // justify-content: center;
-      border: 3px solid gray;
+      border: 3px solid rgb(127, 127, 143);
       justify-content: center;
     
       
@@ -136,7 +136,7 @@ h3{
       height: 50px;
       border-radius: 5px;
       color: aliceblue;
-      background-color: rgb(51, 134, 134);
+      background-color: rgb(88, 107, 214);
     }
   }
 
@@ -167,7 +167,7 @@ h3{
             width: 70px;
             height: 70px;
             border-radius: 50%;
-            border: 3px solid rgb(26, 61, 75);
+            border: 3px solid skyblue;
             display: flex;
             justify-content: center;
             align-items: center;
