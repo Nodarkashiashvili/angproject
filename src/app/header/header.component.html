@@ -23,7 +23,7 @@
 
 
   <div class="logreg">
-     <a *ngIf="isAuthorized()" (click)="logout()">Log out</a>
+     <a class="logout" *ngIf="isAuthorized()" (click)="logout()">Log out</a>
     <a routerLink="/register" *ngIf="!isAuthorized()">Register</a>
     <a routerLink="/login"*ngIf="!isAuthorized()" >Login</a>
   

@@ -98,11 +98,27 @@ nav{
     flex-direction: column;
     gap: 10px;
     text-decoration: none;
-   
+    margin-bottom: 10px;
+  
+     .logout{
+        display: flex;
+        justify-content: center;
+        border: 2px solid gray;
+        width: 90px;
+        border-radius: 15px;
+
+    }
    
 
  a{
         text-decoration: none;
+       
+
     }
-    
+ 
+    .logout:hover{
+        background-color: gray;
+        color: antiquewhite;
+
+    }
 }
