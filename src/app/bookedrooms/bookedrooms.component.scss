@@ -1,5 +1,5 @@
 .divbut {
-  width: 100px;
+  width: 500px;
   // height: 200px;
   // background-color: aqua;
   display: flex;
@@ -7,6 +7,14 @@
   align-items: center;
   padding-top: 60px;
   gap: 10px;
+  .buball{
+    background-color: gray;
+  }
+button{
+  width: 100px;
+  border-radius: 15px;
+  
+}
 }
 .checkinbox {
    
@@ -19,6 +27,7 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
   .divcont{
     width: 90%;
     height: 150px;
@@ -56,6 +65,12 @@
         .box1{
             width: 115px;
             height: 10px;
+            button{
+              border-radius: 20px;
+              background-color: rgb(80, 20, 20);
+               color: antiquewhite;
+            }
+           
         }
         
       
