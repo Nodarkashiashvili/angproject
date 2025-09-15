@@ -7,6 +7,7 @@
   background-size: cover;
   display: flex;
   flex-direction: column;
+  gap:10px;
  align-items: end;
  padding-right: 100px;
   .paragrahp1{
@@ -15,6 +16,7 @@
     // background-color: blue;
     display: flex;
     justify-content: center;
+    gap: 10px;
     color: aliceblue;
     flex-direction: column;
     align-items: center;
@@ -39,7 +41,7 @@
     // height: 100px;
     color: aliceblue;
     display: flex;
-    // gap: 10px;
+    gap: 5px;
    
     
   }
