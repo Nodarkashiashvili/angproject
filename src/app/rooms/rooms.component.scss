@@ -29,6 +29,7 @@
     // border: 2px solid gray;
     border-radius: 10px;
     border: 2px solid gray;
+    padding: 0 20px;
    
       button{
         border-radius: 15px;
@@ -52,9 +53,12 @@
     display: flex;
     padding-left: 10px;
     gap: 5px;
+    
  
     button{
      border-radius: 5px;
+     padding: 0 20px;
+     
 
     }
   
@@ -142,6 +146,7 @@
 select {
   // width: 150px;
   height: 40px;
+  
 }
 .buthovers:hover{
 background-color: gray;
